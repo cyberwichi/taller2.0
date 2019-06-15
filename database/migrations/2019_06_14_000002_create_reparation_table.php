@@ -27,14 +27,15 @@ class CreateReparationTable extends Migration
             $table->string('desrepara');
             $table->date('fecha');
             $table->integer('kilometros');
+            $table->timestamps();
 
             $table->index(["idcar"], 'reparation_car_idx');
 
 
-            $table->foreign('idcar', 'reparation_car_idx')
+            /* $table->foreign('idcar', 'reparation_car_idx')
                 ->references('idcar')->on('car')
                 ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onUpdate('no action'); */
         });
     }
 

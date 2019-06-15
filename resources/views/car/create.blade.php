@@ -24,9 +24,16 @@
         @endif
         {!! Form::open(array('url'=>'car', 'method'=>'POST','autocomplete'=>'off'))!!}
         {{Form::token()}}
+       
         <div class="form-group">
             <label for="idclientForm">Cliente</label>
-            <input type="text" name="idclientForm" class="form-control" placeholder="Cliente">
+            <select name="idclientForm" class="form-control">
+                @foreach ($clientes as $cliente )
+                <option value="{{$cliente->idclient}}">{{$cliente->nombre}} </option>
+
+                @endforeach
+
+            </select>
         </div>
         <div class="form-group">
             <label for="matriculaForm">Matricula</label>

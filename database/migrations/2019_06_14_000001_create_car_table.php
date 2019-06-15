@@ -26,14 +26,16 @@ class CreateCarTable extends Migration
             $table->integer('idclient');
             $table->string('matricula', 15);
             $table->string('modelo', 45)->nullable();
+            $table->timestamps();
 
             $table->index(["idclient"], 'cars_client_idx');
 
 
-            $table->foreign('idclient', 'cars_client_idx')
+
+            /* $table->foreign('idclient', 'cars_client_idx')
                 ->references('idclient')->on('client')
                 ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onUpdate('no action'); */
         });
     }
 

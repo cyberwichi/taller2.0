@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-        <h2>Listado de Clientes <a href="car/create"><button class="btn btn-primary">Añadir
+        <h2>Listado de Clientes <a href="client/create"><button class="btn btn-primary">Añadir
                     Cliente</button></a></h2>
 
 

@@ -31,7 +31,7 @@ class CarController extends Controller
     public function create()
     {
         $clientes=DB::table('client')->get();
-        return view('car.create',['clientes',$clientes]);
+        return view('car.create',['clientes'=> $clientes]);
     }
     public function store(CarFormRequest $request)
     {

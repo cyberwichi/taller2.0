@@ -27,6 +27,7 @@ class CreateClientTable extends Migration
             $table->string('cif', 45);
             $table->string('direccion')->nullable();
             $table->string('telefono', 15)->nullable();
+            $table->timestamps();
         });
     }
 
